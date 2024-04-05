@@ -1,0 +1,38 @@
+name: Auto sshpass
+version: 1.0.1
+slug: auto_sshpass
+description: |
+  SSH tunnel and forwarding using sshpass.
+  Configure username, hostname, password, and more for secure connections.
+url: "https://github.com/ctrlrobotics/auto_sshpass_addon_test/tree/main/auto_sshpass"
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+startup: application
+boot: auto
+init: false
+host_network: true
+map:
+  - "config:rw"
+
+options:
+  username: ""
+  hostname: ""
+  password: ""
+  local_host: "0.0.0.0"
+  local_port: 8888
+  remote_host: "0.0.0.0"
+  remote_port: 8888
+  slack_webhook: ""
+schema:
+  username: str
+  hostname: str
+  password: str
+  local_host: str
+  local_port: int
+  remote_host: str
+  remote_port: int
+  slack_webhook: str?
